@@ -4,3 +4,6 @@
 [submodule "Blog"]
 	path = Blog
 	url = ./Blog/
+[submodule "Console"]
+	path = Console
+	url = ./Console/
