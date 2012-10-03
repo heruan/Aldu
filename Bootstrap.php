@@ -103,13 +103,6 @@ if (!defined('ALDU_PRIVATE')) {
 }
 
 /**
- * Define the default datasource file
- */
-if (!defined('ALDU_DEFAULT_DATASOURCE')) {
-  define('ALDU_DEFAULT_DATASOURCE', ALDU_PRIVATE . DS . "datasource.db");
-}
-
-/**
  * Define the public files' directory
  */
 if (!defined('ALDU_PUBLIC')) {
@@ -163,6 +156,20 @@ if (!defined('ALDU_UPLOAD_PREFIX')) {
  */
 if (!defined('ALDU_SANDBOX')) {
   define('ALDU_SANDBOX', ALDU_PRIVATE . DS . "sandbox");
+}
+
+/**
+ * Define the temporary directory
+ */
+if (!defined('ALDU_TEMP')) {
+  define('ALDU_TEMP', sys_get_temp_dir());
+}
+
+/**
+ * Define the default datasource file
+ */
+if (!defined('ALDU_DEFAULT_DATASOURCE')) {
+  define('ALDU_DEFAULT_DATASOURCE', tempnam(ALDU_TEMP, 'datasource.db'));
 }
 
 require 'Core' . DS . 'Utility' . DS . 'ClassLoader.php';
