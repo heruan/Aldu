@@ -103,6 +103,13 @@ if (!defined('ALDU_PRIVATE')) {
 }
 
 /**
+ * Define the default datasource file
+ */
+if (!defined('ALDU_DEFAULT_DATASOURCE')) {
+  define('ALDU_DEFAULT_DATASOURCE', ALDU_PRIVATE . DS . "datasource.db");
+}
+
+/**
  * Define the public files' directory
  */
 if (!defined('ALDU_PUBLIC')) {
