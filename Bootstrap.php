@@ -18,7 +18,13 @@
  * @license       Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
  */
 
-namespace Aldu;
+namespace
+{
+  include 'functions.php';
+}
+
+namespace Aldu
+{
 use Aldu\Core\Net\HTTP;
 use Aldu\Core\Utility\ClassLoader;
 
@@ -65,6 +71,10 @@ if (!defined('NS')) {
  */
 if (!defined('ALDU_EVENT_SEPARATOR')) {
   define('ALDU_EVENT_SEPARATOR', '.');
+}
+
+if (!defined('ALDU_DATETIME_FORMAT')) {
+  define('ALDU_DATETIME_FORMAT', 'r');
 }
 
 /**
@@ -176,7 +186,8 @@ require 'Core' . DS . 'Utility' . DS . 'ClassLoader.php';
 
 foreach (array(
   new ClassLoader(__NAMESPACE__, ALDU_BASE),
-  new ClassLoader(null, ALDU_APPLICATION), new ClassLoader()
+  new ClassLoader(null, ALDU_APPLICATION),
+  new ClassLoader()
 ) as $cl) {
   $cl->register();
 }
@@ -184,3 +195,4 @@ foreach (array(
 $request = HTTP\Request::fetch(PHP_SAPI);
 $dispatcher = new Core\Dispatcher($request);
 $dispatcher->dispatch();
+}
