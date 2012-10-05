@@ -1,12 +1,12 @@
 [submodule "Core"]
 	path = Core
-	url = ./Core/
+	url = https://github.com/heruan/Aldu-Core.git
 [submodule "Blog"]
 	path = Blog
-	url = ./Blog/
+	url = https://github.com/heruan/Aldu-Blog.git
 [submodule "Console"]
 	path = Console
-	url = ./Console/
+	url = https://github.com/heruan/Aldu-Console.git
 [submodule "Auth"]
 	path = Auth
-	url = ./Auth/
+	url = https://github.com/heruan/Aldu-Auth.git
