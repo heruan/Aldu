@@ -12,3 +12,10 @@ if (!function_exists('get_public_vars')) {
     return $result;
   }
 }
+
+if (!function_exists('println')) {
+  function println($string)
+  {
+    echo $string . "\n";
+  }
+}
