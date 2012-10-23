@@ -18,25 +18,27 @@
  * @license       Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
  */
 
-namespace
-{
+namespace {
   include 'functions.php';
 }
 
-namespace Aldu
-{
+namespace Aldu {
 use Aldu\Core\Net\HTTP;
 use Aldu\Core\Utility\ClassLoader;
 
 /**
  * Define the framework's name
  */
-define('ALDU_NAME', 'AlduPHP');
+if (!defined('ALDU_NAME')) {
+  define('ALDU_NAME', 'AlduPHP');
+}
 
 /**
  * Define the framework's version
  */
-define('ALDU_VERSION', '0.9.0');
+if (!defined('ALDU_VERSION')) {
+  define('ALDU_VERSION', '0.9.0');
+}
 
 /**
  * Define a shortcut for DIRECTORY_SEPARATOR
