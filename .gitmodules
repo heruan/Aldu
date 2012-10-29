@@ -10,3 +10,6 @@
 [submodule "Auth"]
 	path = Auth
 	url = https://github.com/heruan/Aldu-Auth.git
+[submodule "Media"]
+	path = Media
+	url = https://github.com/heruan/Aldu-Media.git
