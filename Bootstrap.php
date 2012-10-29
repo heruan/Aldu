@@ -19,7 +19,7 @@
  */
 
 namespace {
-  include 'functions.php';
+include 'functions.php';
 }
 
 namespace Aldu {
